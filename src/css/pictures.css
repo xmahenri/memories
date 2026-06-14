@@ -1,0 +1,146 @@
+#pictures {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    gap: 20px;
+    z-index: 1;
+}
+
+#pictures::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/background2.png') center/cover no-repeat;
+    transform: scale(1.1);
+    filter: blur(0px);
+    z-index: 1;
+}
+
+#pictures .title {
+    cursor: default;
+    font-family: "Cinzel", serif;
+    margin: 50px 0px;
+    font-size: 3rem;
+    font-weight: 100;
+    color: var(--color-neutral-1);
+    text-align: center;
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    z-index: 2;
+}
+
+#pictures .title:hover {
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+
+#pictures #albun .back .title {
+    font-family: "Tangerine", serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: var(--color-neutral-5);
+}
+
+
+#pictures #albun .back .title:hover {
+    letter-spacing: 0;
+}
+
+.back .text {
+    font-family: "Tangerine", serif;
+    font-size: 1.9rem;
+    color: var(--color-neutral-5);
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#pictures .albun {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    z-index: 2;
+}
+
+#pictures .polaroid {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid var(--color-neutral-2);
+    background-color: var(--color-neutral-1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.8s;
+}
+
+#pictures .polaroid:hover {
+    transform: scale(1.05);
+}
+
+#pictures .front,
+#pictures .back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    backface-visibility: hidden;
+}
+
+#pictures .front {
+    padding-top: 15px;
+}
+
+#pictures .photo {
+    height: 200px;
+    width: 220px;
+    overflow: hidden;
+}
+
+#pictures .photo img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) blur(3px);
+    transition: 0.6s;
+}
+
+#pictures .photo img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%) blur(0px);
+}
+
+#pictures .back {
+    transform: rotateY(180deg);
+    padding: 5px;
+    text-align: center;
+}
+
+#pictures .polaroid.flipped {
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1360px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 430px) {
+
+}
+
+@media screen and (max-width: 390px) {
+
+}

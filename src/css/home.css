@@ -1,0 +1,91 @@
+#home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    z-index: 3;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/background1.png') center/cover no-repeat;
+    transform: scale(1.1);
+    filter: blur( 1px);
+    z-index: 3;
+}
+
+#home .logo{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    z-index: 3;
+    /* background-color: aqua; */
+}
+
+#home .title {
+    cursor: default;
+    font-family: "Tangerine", cursive;
+    font-size: 10rem;
+    font-weight: 400;
+    color: var(--color-neutral-1);
+    text-align: center;
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    z-index: 4;
+}
+
+#home .title:hover {
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+#home span {
+    font-family: "Tangerine", cursive;
+    font-size: 7rem;
+    color: var(--color-primary-5);
+    text-align: end;
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+@media screen and (max-width: 1360px) {
+    #home .title {
+    font-size: 8rem;
+}
+    
+}
+
+@media screen and (max-width: 1024px) {
+    #home {
+    height: 108vh;
+    width: 100%;
+}
+
+    #home .title {
+    font-size: 8rem;
+}
+}
+
+@media screen and (max-width: 430px) {
+    #home .title {
+    font-size: 5rem;
+}
+}
+
+#home span {
+    font-size: 4rem;
+
+}
+
+@media screen and (max-width: 390px) {
+    #home .title {
+    font-size: 5rem;
+}
+}
