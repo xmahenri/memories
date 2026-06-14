@@ -6,9 +6,9 @@
 
 :root {
     --color-primary-1: #ffe5e5;
-    --color-primary-2: #ff9999;
-    --color-primary-3: #ff4d4d;
-    --color-primary-4: #ff1a1a;
+    --color-primary-2: #fa9380;
+    --color-primary-3: #c26860;
+    --color-primary-4: #bf5b58;
     --color-primary-5: #ff0000;
 
     --color-neutral-1: #FFFFFF;
@@ -18,5 +18,22 @@
     --color-neutral-5: #000000;
 
     --color-transparent-1: rgba(255, 255, 255, 0.3);
-    --color-transparent-2: #00ffff30;
+    --color-transparent-2: rgba(0, 0, 0, 0.3);
+}
+
+.heart-particle {
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    z-index: 99999;
+
+    font-size: 18px;
+
+    animation: fadeOut 1.8s linear forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
 }
